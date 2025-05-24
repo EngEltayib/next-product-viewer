@@ -1,6 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
+const metadata = {
+  title: "Product Details",
+  description: "Product Details",
+};
+
 const ProductDetails = async ({ params }) => {
   let productId = await params.Id;
   const data = await fetch(`https://fakestoreapi.com/products/${productId}`);
